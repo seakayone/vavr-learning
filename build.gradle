@@ -8,6 +8,7 @@ repositories {
 
 ext {
     junitJupiterVersion = '5.3.1'
+    vavrVersion = '0.9.3'
 }
 
 lombok {
@@ -21,7 +22,7 @@ test {
 
 dependencies {
     implementation(
-            'io.vavr:vavr:0.9.3'
+            "io.vavr:vavr:${vavrVersion}"
     )
 
     testRuntime("org.junit.jupiter:junit-jupiter-engine:${junitJupiterVersion}")
@@ -30,8 +31,13 @@ dependencies {
             "org.junit.jupiter:junit-jupiter-api:${junitJupiterVersion}",
             "org.junit.jupiter:junit-jupiter-params:${junitJupiterVersion}",
             'org.assertj:assertj-core:3.11.1',
-            'org.assertj:assertj-vavr:0.0.1'
+            'org.assertj:assertj-vavr:0.0.1',
+            "io.vavr:vavr-test:${vavrVersion}"
     )
+}
+
+configurations.all{
+    exclude group: "junit", module: "junit"
 }
 
 sourceCompatibility = JavaVersion.VERSION_11
