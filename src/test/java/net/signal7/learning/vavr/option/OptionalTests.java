@@ -79,8 +79,10 @@ class OptionalTests {
   @Test
   void reacting_on_empty_value_Java9() {
     val none = Optional.empty();
-    none.ifPresentOrElse(noop(),
-        () -> System.out.println("Is empty value"));
+    none.ifPresentOrElse(
+        noop(),
+        () -> System.out.println("Is empty value")
+    );
   }
 
   @Test
