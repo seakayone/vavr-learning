@@ -45,13 +45,13 @@ class OptionalTests {
   }
 
   @Test
-  void alternative_optional_value_Java9() {
+  void alternative_optional_value_Java8() {
     val fallback = findBy(-1).or(() -> Optional.of("fallback"));
     assertThat(fallback).contains("fallback");
   }
 
   @Test
-  void alternative_optional_value_Java8() {
+  void alternative_optional_value_Java9() {
     val fallback = Optional.of(findBy(-1).orElse("fallback"));
     assertThat(fallback).contains("fallback");
   }
