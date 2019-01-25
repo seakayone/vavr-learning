@@ -1,4 +1,4 @@
-package net.signal7.learning.vavr.option;
+package net.signal7.learning.vavr.value.option;
 
 import static java.util.stream.Collectors.toList;
 import static net.signal7.learning.vavr.Util.noop;

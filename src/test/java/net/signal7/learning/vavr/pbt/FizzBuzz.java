@@ -1,4 +1,4 @@
-package net.signal7.learning.vavr.kata;
+package net.signal7.learning.vavr.pbt;
 
 import io.vavr.Tuple;
 import io.vavr.collection.Stream;

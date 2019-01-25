@@ -1,4 +1,4 @@
-package net.signal7.learning.vavr.option;
+package net.signal7.learning.vavr.value.option;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;

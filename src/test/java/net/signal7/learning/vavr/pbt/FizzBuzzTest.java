@@ -1,4 +1,4 @@
-package net.signal7.learning.vavr.kata;
+package net.signal7.learning.vavr.pbt;
 
 
 import io.vavr.test.Arbitrary;
@@ -10,7 +10,7 @@ import java.util.function.Predicate;
 
 import static java.util.function.Predicate.not;
 
-class FizzBuzRzTest {
+class FizzBuzzTest {
 
   private final Predicate<Integer> divisibleByThree = i -> i % 3 == 0;
   private final Predicate<Integer> divisibleByFive = i -> i % 5 == 0;
