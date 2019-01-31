@@ -9,7 +9,7 @@ import static io.vavr.Patterns.$Tuple2;
 class FizzBuzz {
 
   static Stream<String> fizzBuzz() {
-    return Stream.from(1).map(FizzBuzz::numberToString);
+    return Stream.from(0).map(FizzBuzz::numberToString);
   }
 
   private static String numberToString(Integer i) {
