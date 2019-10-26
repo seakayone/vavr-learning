@@ -8,7 +8,7 @@ repositories {
 
 ext {
     junitJupiterVersion = '5.3.1'
-    vavrVersion = '0.9.3'
+    vavrVersion = '0.10.2'
 }
 
 lombok {
