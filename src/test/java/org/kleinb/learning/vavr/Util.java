@@ -1,4 +1,4 @@
-package net.signal7.learning.vavr;
+package org.kleinb.learning.vavr;
 
 import java.util.Random;
 import java.util.function.Consumer;

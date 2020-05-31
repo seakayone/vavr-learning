@@ -1,4 +1,4 @@
-package net.signal7.learning.vavr.value.Try;
+package org.kleinb.learning.vavr.value.Try;
 
 import static org.assertj.vavr.api.VavrAssertions.assertThat;
 

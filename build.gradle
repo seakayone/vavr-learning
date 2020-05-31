@@ -2,6 +2,7 @@ plugins {
     id 'io.franzbecker.gradle-lombok' version '1.14'
     id 'java'
 }
+
 repositories {
     jcenter()
 }
@@ -36,7 +37,7 @@ dependencies {
     )
 }
 
-configurations.all{
+configurations.all {
     exclude group: "junit", module: "junit"
 }
 

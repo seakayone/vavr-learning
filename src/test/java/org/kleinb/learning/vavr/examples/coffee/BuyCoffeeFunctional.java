@@ -1,4 +1,4 @@
-package net.signal7.learning.vavr.examples.coffee;
+package org.kleinb.learning.vavr.examples.coffee;
 
 import io.vavr.Tuple;
 import io.vavr.Tuple2;

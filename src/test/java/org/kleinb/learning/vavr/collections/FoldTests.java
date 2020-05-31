@@ -1,4 +1,4 @@
-package net.signal7.learning.vavr.collections;
+package org.kleinb.learning.vavr.collections;
 
 import static io.vavr.collection.List.empty;
 import static org.assertj.core.api.Assertions.assertThat;

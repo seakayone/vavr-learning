@@ -1,4 +1,4 @@
-package net.signal7.learning.vavr.value.option;
+package org.kleinb.learning.vavr.value.option;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
@@ -6,7 +6,7 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import io.vavr.collection.List;
 import io.vavr.control.Option;
 import lombok.val;
-import net.signal7.learning.vavr.Util;
+import org.kleinb.learning.vavr.Util;
 import org.junit.jupiter.api.Test;
 
 class OptionTests {

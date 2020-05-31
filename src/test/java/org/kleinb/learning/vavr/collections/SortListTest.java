@@ -1,4 +1,4 @@
-package net.signal7.learning.vavr.collections;
+package org.kleinb.learning.vavr.collections;
 
 import static java.util.Comparator.comparingInt;
 import static java.util.stream.Collectors.toList;

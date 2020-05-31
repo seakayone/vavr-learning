@@ -1,4 +1,4 @@
-package net.signal7.learning.vavr.value;
+package org.kleinb.learning.vavr.value;
 
 import static io.vavr.API.CharSeq;
 import static io.vavr.API.For;

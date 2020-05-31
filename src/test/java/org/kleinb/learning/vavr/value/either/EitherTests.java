@@ -1,4 +1,4 @@
-package net.signal7.learning.vavr.value.either;
+package org.kleinb.learning.vavr.value.either;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;

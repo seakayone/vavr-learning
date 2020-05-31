@@ -1,14 +1,14 @@
-package net.signal7.learning.vavr.value.option;
+package org.kleinb.learning.vavr.value.option;
 
 import static java.util.stream.Collectors.toList;
-import static net.signal7.learning.vavr.Util.noop;
+import static org.kleinb.learning.vavr.Util.noop;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 import java.util.NoSuchElementException;
 import java.util.Optional;
 import lombok.val;
-import net.signal7.learning.vavr.Util;
+import org.kleinb.learning.vavr.Util;
 import org.junit.jupiter.api.Test;
 
 class OptionalTests {

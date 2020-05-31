@@ -1,4 +1,4 @@
-package net.signal7.learning.vavr.value.tuple;
+package org.kleinb.learning.vavr.value.tuple;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
