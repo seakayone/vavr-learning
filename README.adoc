@@ -1,0 +1,11 @@
+= Learning Test For Vavr
+
+image::https://github.com/seakayone/vavr-learning/workflows/Java%20CI%20with%20Gradle/badge.svg[]
+
+https://www.vavr.io/[Vavr] is a functional library for Java.
+
+This repository contains learning tests, which are a nice way to teach yourself a new library.
+
+
+
+
