@@ -12,7 +12,9 @@ public final class Util {
   public static String randomBySeed(long seed) {
     return String.valueOf(new Random(seed).nextLong());
   }
+
   public static <T> Consumer<T> noop() {
-    return t -> {};
+    return t -> {
+    };
   }
 }

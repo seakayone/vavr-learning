@@ -2,6 +2,8 @@ package net.signal7.learning.vavr.value.either;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import static org.assertj.core.api.Assertions.fail;
+import static org.assertj.core.api.Assertions.filter;
 
 import io.vavr.control.Either;
 import java.util.function.Function;
@@ -43,5 +45,13 @@ class EitherTests {
     Either<Failed, String> failure = Either.left(Failed.of("nonfatal"));
 
     assertThat(getSuccessOrThrow(failure)).isEqualTo("nonfatal");
+  }
+
+
+  @Test
+  void foo() {
+    Either<Failed, String> failure = Either.left(Failed.of("nonfatal"));
+
+
   }
 }

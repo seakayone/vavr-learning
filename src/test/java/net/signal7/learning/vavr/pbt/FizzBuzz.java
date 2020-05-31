@@ -14,10 +14,10 @@ class FizzBuzz {
 
   private static String numberToString(Integer i) {
     return Match(Tuple.of(i % 3, i % 5)).of(
-      Case($Tuple2($(0), $(0)), "FizzBuzz"),
-      Case($Tuple2($(0), $()), "Fizz"),
-      Case($Tuple2($(), $(0)), "Buzz"),
-      Case($(), i.toString())
+        Case($Tuple2($(0), $(0)), "FizzBuzz"),
+        Case($Tuple2($(0), $()), "Fizz"),
+        Case($Tuple2($(), $(0)), "Buzz"),
+        Case($(), i.toString())
     );
   }
 }

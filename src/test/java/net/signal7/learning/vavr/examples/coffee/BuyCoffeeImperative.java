@@ -12,8 +12,9 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class BuyCoffeeImperative {
-  
+
   class Cafe {
+
     Coffee buyCoffee(CreditCard cc) {
       var cup = new Coffee();
       cc.charge(cup.getPrice());
@@ -33,12 +34,14 @@ class BuyCoffeeImperative {
 
   @Value
   class Coffee {
+
     long price = 250;
   }
 
   @Data
   @AllArgsConstructor
   class CreditCard {
+
     private long balance;
 
     void charge(long amount) {

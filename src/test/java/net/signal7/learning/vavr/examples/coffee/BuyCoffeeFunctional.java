@@ -13,6 +13,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 class BuyCoffeeFunctional {
 
   class Cafe {
+
     Tuple2<Coffee, Charge> buyCoffee(CreditCard cc) {
       final var cup = new Coffee();
       final var charge = new Charge(cc, cup.getPrice());
@@ -22,23 +23,28 @@ class BuyCoffeeFunctional {
     Tuple2<List<Coffee>, Charge> buyCoffees(CreditCard cc, int n) {
       var purchases = List.fill(n, () -> buyCoffee(cc));
       return purchases.unzip(e -> Tuple.of(e._1, e._2))
-        .map2(charges -> charges.reduce(Charge::combine));
+          .map2(charges -> charges.reduce(Charge::combine));
     }
   }
 
   @Value
   class Coffee {
+
     long price = 250;
   }
 
   @Value
   class CreditCard {
-    @NonNull String number;
+
+    @NonNull
+    String number;
   }
 
   @Value
   class Charge {
-    @NonNull CreditCard cc;
+
+    @NonNull
+    CreditCard cc;
     long amount;
 
     Charge combine(Charge other) {

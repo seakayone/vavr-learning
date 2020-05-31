@@ -27,39 +27,40 @@ class FizzBuzzTest {
   void fizz() {
     val multiplesOfThreeNotFive = multiplesOfThree.filter(not(divisibleByFive));
     Property.def("Multiples of three but not five must equal Fizz")
-      .forAll(multiplesOfThreeNotFive)
-      .suchThat(i -> fizzBuzzElement(i).equals("Fizz"))
-      .check()
-      .assertIsSatisfied();
+        .forAll(multiplesOfThreeNotFive)
+        .suchThat(i -> fizzBuzzElement(i).equals("Fizz"))
+        .check()
+        .assertIsSatisfied();
   }
 
   @Test
   void buzz() {
     val multiplesOfFiveNotThree = multiplesOfFive.filter(not(divisibleByThree));
     Property.def("Multiples of five but not three must equal Buzz")
-      .forAll(multiplesOfFiveNotThree)
-      .suchThat(i -> fizzBuzzElement(i).equals("Buzz"))
-      .check()
-      .assertIsSatisfied();
+        .forAll(multiplesOfFiveNotThree)
+        .suchThat(i -> fizzBuzzElement(i).equals("Buzz"))
+        .check()
+        .assertIsSatisfied();
   }
 
   @Test
   void fizzBuzz() {
     val multiplesOfThreeAndFive = naturalInts.filter(divisibleByFive.and(divisibleByThree));
     Property.def("Multiples of three and five must equal FizzBuzz")
-      .forAll(multiplesOfThreeAndFive)
-      .suchThat(i -> fizzBuzzElement(i).equals("FizzBuzz"))
-      .check()
-      .assertIsSatisfied();
+        .forAll(multiplesOfThreeAndFive)
+        .suchThat(i -> fizzBuzzElement(i).equals("FizzBuzz"))
+        .check()
+        .assertIsSatisfied();
   }
 
   @Test
   void number() {
-    val noMultiplesOfThreeOrFive = naturalInts.filter(not(divisibleByFive).and(not(divisibleByThree)));
+    val noMultiplesOfThreeOrFive = naturalInts
+        .filter(not(divisibleByFive).and(not(divisibleByThree)));
     Property.def("Multiples of neither three nor five must equal the number")
-      .forAll(noMultiplesOfThreeOrFive)
-      .suchThat(i -> fizzBuzzElement(i).equals(i.toString()))
-      .check()
-      .assertIsSatisfied();
+        .forAll(noMultiplesOfThreeOrFive)
+        .suchThat(i -> fizzBuzzElement(i).equals(i.toString()))
+        .check()
+        .assertIsSatisfied();
   }
 }
