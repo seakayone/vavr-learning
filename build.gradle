@@ -42,4 +42,4 @@ configurations.all{
 
 sourceCompatibility = JavaVersion.VERSION_11
 
-wrapper.gradleVersion = '5.6.2'
+wrapper.gradleVersion = '6.4.1'
