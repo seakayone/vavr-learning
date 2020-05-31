@@ -12,8 +12,8 @@ ext {
 }
 
 lombok {
-    version = "1.18.4"
-    sha256 = ""
+    version = "1.18.12"
+    sha256 = "48e4e5d60309ebd833bc528dcf77668eab3cd72c"
 }
 
 test {
