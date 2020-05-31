@@ -1,4 +1,4 @@
-= Learning Test For Vavr
+= Learning Tests For Vavr
 
 https://github.com/seakayone/vavr-learning/actions?query=workflow%3A%22Java+CI+with+Gradle%22[image:https://github.com/seakayone/vavr-learning/workflows/Java%20CI%20with%20Gradle/badge.svg[]]
 
