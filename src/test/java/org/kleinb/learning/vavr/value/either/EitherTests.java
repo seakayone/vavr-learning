@@ -2,13 +2,10 @@ package org.kleinb.learning.vavr.value.either;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
-import static org.assertj.core.api.Assertions.fail;
-import static org.assertj.core.api.Assertions.filter;
 
 import io.vavr.control.Either;
 import java.util.function.Function;
 import lombok.Value;
-import lombok.val;
 import org.junit.jupiter.api.Test;
 
 class EitherTests {
@@ -21,7 +18,7 @@ class EitherTests {
 
   @Test
   void failed_with_fatal_reason_should_throw() {
-    val failure = Either.<Failed, String>left(Failed.of("fatal"));
+    final var failure = Either.<Failed, String>left(Failed.of("fatal"));
     assertThatThrownBy(() -> getSuccessOrThrow(failure))
         .isInstanceOf(IllegalArgumentException.class);
   }

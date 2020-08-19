@@ -1,14 +1,12 @@
 package org.kleinb.learning.vavr.pbt;
 
 
+import static java.util.function.Predicate.not;
+
 import io.vavr.test.Arbitrary;
 import io.vavr.test.Property;
-import lombok.val;
-import org.junit.jupiter.api.Test;
-
 import java.util.function.Predicate;
-
-import static java.util.function.Predicate.not;
+import org.junit.jupiter.api.Test;
 
 class FizzBuzzTest {
 
@@ -25,7 +23,7 @@ class FizzBuzzTest {
 
   @Test
   void fizz() {
-    val multiplesOfThreeNotFive = multiplesOfThree.filter(not(divisibleByFive));
+    final var multiplesOfThreeNotFive = multiplesOfThree.filter(not(divisibleByFive));
     Property.def("Multiples of three but not five must equal Fizz")
         .forAll(multiplesOfThreeNotFive)
         .suchThat(i -> fizzBuzzElement(i).equals("Fizz"))
@@ -35,7 +33,7 @@ class FizzBuzzTest {
 
   @Test
   void buzz() {
-    val multiplesOfFiveNotThree = multiplesOfFive.filter(not(divisibleByThree));
+    final var multiplesOfFiveNotThree = multiplesOfFive.filter(not(divisibleByThree));
     Property.def("Multiples of five but not three must equal Buzz")
         .forAll(multiplesOfFiveNotThree)
         .suchThat(i -> fizzBuzzElement(i).equals("Buzz"))
@@ -45,7 +43,7 @@ class FizzBuzzTest {
 
   @Test
   void fizzBuzz() {
-    val multiplesOfThreeAndFive = naturalInts.filter(divisibleByFive.and(divisibleByThree));
+    final var multiplesOfThreeAndFive = naturalInts.filter(divisibleByFive.and(divisibleByThree));
     Property.def("Multiples of three and five must equal FizzBuzz")
         .forAll(multiplesOfThreeAndFive)
         .suchThat(i -> fizzBuzzElement(i).equals("FizzBuzz"))
@@ -55,7 +53,7 @@ class FizzBuzzTest {
 
   @Test
   void number() {
-    val noMultiplesOfThreeOrFive = naturalInts
+    final var noMultiplesOfThreeOrFive = naturalInts
         .filter(not(divisibleByFive).and(not(divisibleByThree)));
     Property.def("Multiples of neither three nor five must equal the number")
         .forAll(noMultiplesOfThreeOrFive)

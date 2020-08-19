@@ -1,10 +1,12 @@
 package org.kleinb.learning.vavr.pbt;
 
+import static io.vavr.API.$;
+import static io.vavr.API.Case;
+import static io.vavr.API.Match;
+import static io.vavr.Patterns.$Tuple2;
+
 import io.vavr.Tuple;
 import io.vavr.collection.Stream;
-
-import static io.vavr.API.*;
-import static io.vavr.Patterns.$Tuple2;
 
 class FizzBuzz {
 

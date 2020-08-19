@@ -1,5 +1,7 @@
 package org.kleinb.learning.vavr.examples.coffee;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 import io.vavr.Tuple;
 import io.vavr.Tuple2;
 import io.vavr.collection.List;
@@ -7,8 +9,6 @@ import lombok.NonNull;
 import lombok.Value;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.assertj.core.api.Assertions.assertThat;
 
 class BuyCoffeeFunctional {
 

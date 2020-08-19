@@ -5,9 +5,8 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 import io.vavr.collection.List;
 import io.vavr.control.Option;
-import lombok.val;
-import org.kleinb.learning.vavr.Util;
 import org.junit.jupiter.api.Test;
+import org.kleinb.learning.vavr.Util;
 
 class OptionTests {
 
@@ -19,39 +18,39 @@ class OptionTests {
 
   @Test
   void none_is_empty() {
-    val none = Option.none();
+    final var none = Option.none();
     assertThat(none).isEmpty();
   }
 
   @Test
   void null_is_empty() {
     // will not explode with NPE
-    val none = Option.of(null);
+    final var none = Option.of(null);
     assertThat(none).isEmpty();
   }
 
   @Test
   void some_null_is_null() {
     // you cannot do this with Optional
-    val none = Option.some(null);
+    final var none = Option.some(null);
     assertThat(none.get()).isEqualTo(null);
   }
 
   @Test
   void foo_is_foo() {
-    val none = Option.of("foo");
+    final var none = Option.of("foo");
     assertThat(none).contains("foo");
   }
 
   @Test
   void alternative_option_value() {
-    val actual = findBy(-1).orElse(() -> Option.of("fallback"));
+    final var actual = findBy(-1).orElse(() -> Option.of("fallback"));
     assertThat(actual).contains("fallback");
   }
 
   @Test
   void list_of_options() {
-    val postalCodes = List.of(-1, 64293, 79618, -42)
+    final var postalCodes = List.of(-1, 64293, 79618, -42)
         .map(this::findBy)
         .flatMap(Option::toStream)
         .toList();
@@ -61,13 +60,13 @@ class OptionTests {
 
   @Test
   void reacting_on_empty_value() {
-    val none = Option.none();
+    final var none = Option.none();
     none.onEmpty(() -> System.out.println("Is empty value"));
   }
 
   @Test
   void consuming_none_and_value() {
-    val none = Option.none();
+    final var none = Option.none();
     none
         .peek(it -> {/*do something*/})
         .onEmpty(() -> {/*do something else */});
@@ -75,7 +74,7 @@ class OptionTests {
 
   @Test
   void as_exception() {
-    val none = Option.none();
+    final var none = Option.none();
     assertThatThrownBy(() ->
         none.getOrElseThrow(IllegalStateException::new)
     ).isInstanceOf(IllegalStateException.class);
